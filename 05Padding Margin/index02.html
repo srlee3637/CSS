@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: url('img/bg_grid.jpg');
+        }
+
+        p{
+            width: 300px;
+            height: 100px;
+            border: 1px solid #777;
+            background-color: aqua;
+            /* padding: 10px; /* 4,3,2,1 */ 
+            /* padding: 10px 20px 30px 20px; *//* 위, 오른쪽, 아래, 왼쪽 (시계 방향) */
+            /* padding: 10px 30px; *//* 위아래, 좌우 */
+            padding: 10px 20px 30px;/* 위, 좌우, 아래 */
+            
+            box-sizing: border-box;/* 상자의 크기를 border, padding은 제외하고 계산 */
+        }
+
+    </style>
+
+</head>
+<body>
+    <p>
+        박스의 가로: width + padding + border = 342px <br>
+        박스의 세로: height + padding + border = 142px 
+    </p>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }/*이렇게 하면 기본 주어진 list의 속성을 다 없애고 시작 할 수 있다.*/
+        
+        .nav{
+            text-align: center;
+        }
+        
+        .nav li{
+            display: inline;
+        }
+
+        .nav li a{
+            display: inline-block;
+            height: 100px;
+            line-height: 100px;
+            width: 100px;
+            text-decoration: none;/* 밑줄 제거 */
+            
+        }
+
+
+
+
+        #header{
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .wrap ul li{
+            display: inline;
+        }
+
+        .wrap ul li a{
+            color: #fff;
+            display: inline-block;
+            height: 100px;
+            line-height: 100px;
+            width: 100px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            
+        }
+        .wrap ul li a:hover{
+            background-color: #777;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+
+        <li><a href="#">목록</a></li>
+        <li><a href="#">목록</a></li>
+        <li><a href="#">목록</a></li>
+        <li><a href="#">목록</a></li>
+
+    </ul>
+
+    <header id="header">
+        <h3>목록만들기</h3>
+        <nav class="wrap">
+                <ul>
+                    <li><a href="#">목록</a></li>
+                    <li><a href="#">목록</a></li>
+                    <li><a href="#">목록</a></li>
+                    <li><a href="#">목록</a></li>
+                    <li><a href="#">목록</a></li>
+                </ul>
+        </nav>
+    </header>
+
+</body>
+</html>

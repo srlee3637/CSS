@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            border: 1px solid #777;
+            /*float 적용 시 부모가 자식을 감싸지 못하는 문제 발생*/
+            /* 1.가상요소 방법 적용 
+            .box:after{content:""; display:block; clear:both;} */
+            /* 2. 부모에 overflow:hidden;  */
+            overflow: hidden;
+            width: 500px;
+            
+            margin: 0 auto;
+            
+        }
+        
+        /*.box:after {
+            content: "";
+            display: block;
+            clear: both;
+        }*/
+        
+        
+        .box li {
+            float: left;
+            width: 20.0000%;/*부모 너비 대비해서 자식의 너비 설정 % */
+            border: 1px solid #777;
+            box-sizing: border-box;
+            
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            
+            
+        }
+        .box li:hover{
+            background-color: #777;
+            border: 5px solid #fff;
+            border-radius: 10bpx;
+        }
+        </style>
+
+</head>
+
+<body>
+
+    <ul class="box">
+        <li>박스1</li>
+        <li>박스2</li>
+        <li>박스3</li>
+        <li>박스4</li>
+        <li>박스5</li>
+
+    </ul>
+</body>
+
+</html>

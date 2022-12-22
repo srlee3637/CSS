@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .tx{
+            color: red; 
+            letter-spacing: -5px; /* 글자 간격 */
+            text-align: center; /* 글자 정렬(블럭요소)
+            블럭 요소에서 사용가능, 인라인에서 써도 움직이지 않음*/
+        }
+
+        /* 기준이 되는 나란히 배치는 요소에 들어감 */
+        .tx1 img{
+            vertical-align: top;
+        }
+
+        /* 기준이 되는 요소가 없을 때 수직 정렬 */
+        .tx2{
+            border: 1px solid #777;
+            height: 100px;
+            line-height: 50px; /*줄간 간격*/
+        }
+    </style>
+
+</head>
+<body>
+    <p class="tx">
+        안녕하세요
+    </p>
+    
+    <p class="tx1">
+        <img src="img/css3.png" alt="이미지">
+        버티컬 얼라인
+    </p>
+
+    <p class="tx2">
+        기준이 되는 요소가 없을 때 수직 정렬<br>
+        기준이 되는 요소가 없을 때 수직 정렬
+    </p>
+</body>
+</html>

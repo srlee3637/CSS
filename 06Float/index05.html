@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* 수정하기 편하기 위해서 패딩과 마진을 없앤다 */
+
+        .outter {
+            overflow: hidden;
+            width: 1020px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        /* 
+        최상위 박스는 가로 1020px,로 지정하고 하위에서 세개의 박스를 쌓을 거기 때문에
+        overflow hidden 처리를 해준다 
+        또한 가운데 정렬을 위해 margin: 0 auto
+        위에서 조금 띄어서 편하게 보기 위해서 padding top을 준다
+        */
+
+        .wrap {
+            float: left;
+            overflow: hidden;
+            width: 480px;
+        }
+        /*
+        3개의 박스의 공통된 클래스 명이다. 
+        상위 클래스에서 overflow hidden처리를 해주었기 때문에
+        float: left로 쌓고 첫 번째 박스 같은 경우에는 
+        안에 또 박스가 6개 들어가기 때문에 overflow: hidden 처리도 해준다.
+        첫번째 박스의 크기는 가로 480px
+        */
+
+        .wrap .inner {
+            float: left;
+            width: 33.3333%;
+            box-sizing: border-box;
+            border: 1px solid #777;
+            height: 155px;
+        }
+        /*
+        첫번째 제일 왼쪽 박스 안에 6개의 박스가 들어간다 
+        가로 100을 기준으로 33.3333%씩 크기를 지정해주면 3개씩 2줄 들어간다.
+        이때 보더를 지정하는데 
+        보더로 인해서 실제 퍼센트로 주어진 크기 + border 크기도 추가가 되기 때문에 
+        box-sizing을 통해서 border크기를 뺀 크기로 자동 지정해주는 border-box를 사용한다
+        첫번째 박스 안에 들어가는 6개의 박스 하나당 높이는 155px
+        */
+
+        .wrap2 {
+            margin-left: 8px;
+            border: 1px solid #777;
+            width: 236px;
+            height: 310px;
+        }
+        /*
+        두번째 박스에 대한 설정이다
+        우선 첫번째 박스로 부터 margin-left를 통해서 8px 공간을 준다 
+        동일하게 보더를 주고 가로는 236px 높이는 310px로 지정해준다
+        */
+
+        .wrap3 {
+            margin-left: 8px;
+            border: 1px solid #777;
+            width: 280px;
+            height: 310px;
+            text-align: center;
+        }
+
+        /*
+        세번째 박스에 대한 설정이다
+        우선 두번째 박스로 부터 margin-left를 통해서 8px 공간을 준다 
+        동일하게 보더를 주고 가로는 280px 높이는 310px로 지정해준다 
+        추가적으로 글씨는 가운데 정렬을 해준다
+        */
+
+        .up{
+            height: 50.0000%;
+            border-bottom: 1px solid #777;
+            padding: 0px 15px;
+            overflow: hidden;
+        }
+
+        /*
+        세번째 박스는 위 아래로 절반이 나눠져야 하기 때문에 class up을 만들어 주었다
+        우선 절반을 딱 나눠주기 위해서 높이를 50%로 지정해주고 
+        위의 박스를 기준으로 border bottom을 준다
+        또한 가운데로 글씨들을 모아주기 위해서 padding을 좌우로 준다.
+        후에 아래 글씨들이 float으로 쌓아줘야 하기 때문에 overflow hidden처리를 해준다 
+        */
+
+        span{  
+            font-size: 5px;
+            color: #777;
+            padding-top: 20px;
+        }
+
+        /*
+        up클래스 안의 글씨들을 span으로 지정했기 때문에 작은 글씨로 먼저 만들어 준다
+        주어진 문제에서 글씨가 회색이기 때문에 회색 지정을 해주고
+        padding top을 통해서 위의 공간을 만들어 준다.
+        */
+
+        .top{
+            padding-top: 0;
+            font-size: larger;
+            color:black;
+        }
+        /*
+            가장 위의 글씨또한 span으로 처리가 되어있기 때문에 
+            따로 top 이라는 클래스를 줘서 글씨 크기를 위의 글씨만 크게 지정하고
+            색을 다시 검정으로 변경 시키며 padding-top을 주었던 것을 없앤다.
+        */
+        .up .left{
+            float: left;
+        }
+
+        .up .right{
+            float: right;
+        }
+        /*
+        왼쪽으로 붙여야 하는 글씨는 float left를 해주고
+        오른쪽으로 붙여야 하는 글씨는 float right를 해준다.
+        */
+        
+        .btn-wrap {
+            background-color: #19ce60;
+            border: none;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 12px 41%;
+            cursor: pointer;/* 손가락 */
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn-wrap:hover{
+            background-color: #777;
+        }
+
+        /*
+            버튼은 기존에 한 자료에서 크게 바뀌지 않았기 때문에 주석은 생략한다.
+        */
+        
+    </style>
+</head>
+
+<body>
+    <div class="outter">
+
+
+        <h5>최신앨범(1020px), 사진영역상자 480px</h5>
+        <div class="wrap"><!--왼쪽 -->
+
+            <div class="inner">
+                <div>
+                    사진(너비 33.3333%, 높이 155px)
+                </div>
+            </div>
+
+            <div class="inner">
+                <div>사진</div>
+            </div>
+
+            <div class="inner">
+                <div>사진</div>
+            </div>
+
+            <div class="inner">
+                <div>사진</div>
+            </div>
+
+            <div class="inner">
+                <div>사진</div>
+            </div>
+
+            <div class="inner">
+                <div>사진</div>
+            </div>
+
+        </div>
+
+        <div class="wrap wrap2"><!--가운데 -->
+            <img src="img/bgimg.png" alt="이미지"><br>
+            이미지영역: 236px, 높이 310px, 왼쪽 마진: 8px
+        </div>
+
+        <div class="wrap wrap3"><!--오른쪽 -->
+            <div class="up">
+                <span class="top">너비: 280px, 왼쪽마진 8px</span>
+
+                <span class="left">멜론을 더 안전하게 이용하세요</span>
+                <span class="right">회원가입</span>
+
+                <button type="button" class="btn-wrap">로그인</button>
+
+            </div>
+            <div class="up"></div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }/*이렇게 하면 기본 주어진 list의 속성을 다 없애고 시작 할 수 있다.*/
+
+        img{
+            height: auto;
+            max-width: 100%;
+        }
+
+        #header{
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .gnb li{
+            display: inline;
+        }
+
+        .gnb li a{
+            color: #fff;
+            display: inline-block;
+            height: 90px;
+            line-height: 90px;
+            width: 80px;
+            text-decoration: none;
+            font-size: 25px;
+            font-weight: 500;
+            box-sizing: border-box;
+            
+        }
+        .gnb li a:hover{
+            
+            border-bottom: 3px solid #fff;
+        }
+
+
+        .wrap{
+            margin: 60px;
+        }
+        .inner{
+            border: 1px solid #777;
+            padding: 30px;
+           
+           
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header id="header">
+        <nav class="gnb">
+                <ul>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">메뉴</a></li>
+                </ul>
+        </nav>
+    </header>
+    
+    <article>
+        <img src="img/1.jpg" alt="배너1">
+
+    </article>
+
+    <section class="wrap">
+        <h3>오늘의 발견</h3>
+        
+        <div class="inner">
+            컨텐츠내용... <br>
+            컨텐츠내용... <br>
+            컨텐츠내용... <br>
+            컨텐츠내용... <br>
+            컨텐츠내용... <br>
+            컨텐츠내용... <br>
+            컨텐츠내용... <br>
+        </div>
+    </section>
+
+</body>
+</html>
