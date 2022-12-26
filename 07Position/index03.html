@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        section{
+            height: 2000px;
+            background-color: aqua;
+            margin-top:150px ; 
+        }
+
+        header{
+            background-color: #fff;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+
+            text-align: center;
+            z-index: 5;
+        }
+        
+        .menu ul{
+            background-color: black;
+        }
+
+        .menu ul li{
+            display: inline;
+        }
+
+        .menu ul li a{
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .side{
+            position: fixed;
+            right: 0;
+            top: 200px;
+            /*포지션이 겹치는 경우 z축의 우선 순위 지정 보통 1~10 사이 값*/
+            z-index: 10;
+
+            background-color: #282828;
+            text-align: center;
+        }
+
+        
+
+        .side ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            width: 100px;
+        
+            box-sizing: border-box;
+            border-top: 2px solid #777;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <div>
+            <img src="img/bgimg.png" alt="로고">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <aside class="side">
+        <ul>
+            <li><a href="#">카톡</a></li>
+            <li><a href="#">전화번호</a></li>
+            <li><a href="#">메뉴</a></li>
+            <li><a href="#">메뉴</a></li>
+        </ul>   
+    </aside>
+
+    <section>
+        내용......
+    </section>
+
+
+</body>
+</html>
